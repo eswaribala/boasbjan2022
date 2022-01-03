@@ -17,6 +17,9 @@ public class IOCTest {
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("com/boa/"
 				+ "springannotationlab/resources/spring-config.xml");
 		
+		Customer customer=(Customer) ctx.getBean("customer");
+		System.out.println(customer.getTransaction().getTransactionId());
+		
 		
 	}
 

@@ -17,7 +17,11 @@
 	<!-- <constructor-arg index="0" ref="transaction"></constructor-arg> -->
 	
 	</bean>
-	<bean id="transaction" class="com.boa.springannotationlab.models.Transaction">
+	<bean id="transaction1" class="com.boa.springannotationlab.models.Transaction">
+	<property name="transactionId" value="973693569"></property>
+	</bean>
+	<bean id="transaction2" class="com.boa.springannotationlab.models.Transaction">
+	<property name="transactionId" value="973693570"></property>
 	</bean>
 	
 	</beans>
