@@ -8,6 +8,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import com.boa.springannotationlab.models.Customer;
+import com.boa.springannotationlab.models.RefillCash;
 
 public class IOCTest {
 
@@ -20,7 +21,9 @@ public class IOCTest {
 		Customer customer=(Customer) ctx.getBean("customer");
 		System.out.println(customer.getTransaction().getTransactionId());
 		System.out.println(customer.getTransaction().getATM().getAtmCode());
-		
+	
+		RefillCash refillCash=(RefillCash) ctx.getBean("refillCash");
+	
 	}
 
 }
