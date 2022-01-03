@@ -19,7 +19,7 @@ public class IOCTest {
 		
 		Customer customer=(Customer) ctx.getBean("customer");
 		System.out.println(customer.getTransaction().getTransactionId());
-		
+		System.out.println(customer.getTransaction().getATM().getAtmCode());
 		
 	}
 
