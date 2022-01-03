@@ -28,6 +28,7 @@ public class IOCTest {
 		ApplicationContext annCtx = new  AnnotationConfigApplicationContext
 				(RefillCash.class);
 	         ATM atm=(ATM) annCtx.getBean("atm");
+	    
 	         
 	}
 
