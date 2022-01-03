@@ -9,12 +9,12 @@
 	<context:component-scan base-package="com.boa.springannotationlab.*"></context:component-scan>
 	
 	<!-- Java instance -->
-	<bean id="customer" class="com.boa.springannotationlab.models.Customer">
-	<!-- Dependency injection -->
-	<!-- <property name="customerId" value="59695"></property>
+	<!-- <bean id="customer" class="com.boa.springannotationlab.models.Customer">
+	Dependency injection
+	<property name="customerId" value="59695"></property>
 	<property name="name" value="Ashok"></property>
-	<property name="email" value="ashok@gmail.com"></property> -->
-	<!-- <constructor-arg index="0" ref="transaction"></constructor-arg> -->
+	<property name="email" value="ashok@gmail.com"></property>
+	<constructor-arg index="0" ref="transaction"></constructor-arg>
 	
 	</bean>
 	<bean id="transaction1" class="com.boa.springannotationlab.models.Transaction">
@@ -22,6 +22,6 @@
 	</bean>
 	<bean id="transaction2" class="com.boa.springannotationlab.models.Transaction">
 	<property name="transactionId" value="973693570"></property>
-	</bean>
+	</bean> -->
 	
 	</beans>

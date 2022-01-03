@@ -4,13 +4,16 @@ import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-@Data
+
 @AllArgsConstructor
 @NoArgsConstructor
+@Component
+@Data
 public class Customer {
 	
 	private long customerId;
@@ -18,10 +21,11 @@ public class Customer {
 	//private LocalDate dob;
 	private String email;
 	@Autowired
-	@Qualifier(value = "transaction2")
+	//@Qualifier(value = "transaction2")
 	private Transaction transaction;
 	
 	/*
+	 * @Autowired
 	 * public Customer(Transaction transaction) { this.transaction=transaction; }
 	 */
 
