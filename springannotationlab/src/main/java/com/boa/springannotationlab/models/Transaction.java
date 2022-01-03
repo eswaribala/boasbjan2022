@@ -14,7 +14,7 @@ public class Transaction {
 	private long transactionId;
 	private long amount;
 	
-	@Bean
+	@Bean("atm")
 	public ATM getATM() {
 		return new ATM();
 	}
