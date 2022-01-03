@@ -7,6 +7,10 @@
 	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<!-- Java instance -->
 	<bean id="customer" class="com.boa.springcorelab.models.Customer">
+	<!-- Dependency injection -->
+	<property name="customerId" value="59695"></property>
+	<property name="name" value="Ashok"></property>
+	<property name="email" value="ashok@gmail.com"></property>
 	
 	</bean>
 	</beans>

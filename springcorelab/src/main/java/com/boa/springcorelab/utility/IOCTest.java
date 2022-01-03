@@ -17,6 +17,7 @@ public class IOCTest {
 		BeanFactory beanFactory=new XmlBeanFactory(resource);
 		//IOC
 		Customer customer=(Customer) beanFactory.getBean("customer");
+		//testing DI
 		System.out.println(customer);
 	}
 
