@@ -1,5 +1,8 @@
 package com.boa.inventoryui.controllers;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
@@ -26,7 +29,8 @@ public class CategoryUIController {
 			HttpMethod.GET,null,Category[].class);
 		
 	Category[] categories=responseEntity.getBody();
-	model.addAttribute("catelogyList", categories);
+	List<Category> categoryList=Arrays.asList(categories);
+	model.addAttribute("catelogyList", categoryList);
 		return "index";
 	}
 }
