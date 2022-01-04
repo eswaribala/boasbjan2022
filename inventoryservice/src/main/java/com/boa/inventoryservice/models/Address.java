@@ -1,5 +1,5 @@
 package com.boa.inventoryservice.models;
-
+/*
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
@@ -20,3 +20,4 @@ public class Address {
 	@Column(name="PinCode",nullable = false)
 	private String pinCode;
 }
+*/

@@ -1,5 +1,5 @@
 package com.boa.inventoryservice.models;
-
+/*
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -27,3 +27,4 @@ public class Location {
 	private long contactNo;
 
 }
+*/

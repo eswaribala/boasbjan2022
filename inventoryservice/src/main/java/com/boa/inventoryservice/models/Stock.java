@@ -1,5 +1,5 @@
 package com.boa.inventoryservice.models;
-
+/*
 import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
@@ -45,3 +45,4 @@ public class Stock {
 	private Location location;
 	
 }
+*/
