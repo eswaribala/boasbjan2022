@@ -10,15 +10,17 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 @Embeddable
 public class ProductDescription {
-    @Column(name="Product_Name")
+    @Column(name="Product_Name",nullable = false,length = 100)
 	private String productName;
-    @Column(name="Manufacturer_Name")
+    @Column(name="Manufacturer_Name",nullable = false,length = 100)
 	private String manuFacturerName;
     @Column(name="Production_Date")
     @DateTimeFormat(iso = ISO.DATE)
-    private LocalDate dop;
+    private LocalDate dom;
     @Column(name="Production_Expiry")
     @DateTimeFormat(iso = ISO.DATE)
     private LocalDate doe;
+    @Column(name="Cost")
+    private long cost;
      
 }
