@@ -25,12 +25,12 @@ public class CategoryUIController {
 	@GetMapping("/")
 	public String getIndex(Model model) {
 		
-	ResponseEntity<Category[]> responseEntity=restTemplate.exchange(serviceUrl,
+	ResponseEntity<Category[]> responseEntity=restTemplate.exchange(serviceUrl+"/categories/v1.0",
 			HttpMethod.GET,null,Category[].class);
-		
+		System.out.println(responseEntity.getBody());
 	Category[] categories=responseEntity.getBody();
 	List<Category> categoryList=Arrays.asList(categories);
-	model.addAttribute("catelogyList", categoryList);
+	model.addAttribute("categoryList", categoryList);
 		return "index";
 	}
 }
