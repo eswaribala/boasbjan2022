@@ -50,6 +50,7 @@ public class CategoryUIController {
 	public String addWinner(@ModelAttribute("category") Category category) 
 	{
 		
+		System.out.println(category.getCategoryName());
 		  HttpHeaders headers = new HttpHeaders();
 		  headers.setContentType(MediaType.APPLICATION_JSON); 
 		  HttpEntity<Category> request = new HttpEntity<>(category,headers); 
