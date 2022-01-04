@@ -15,6 +15,8 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.ForeignKey;
 import lombok.Data;
 
@@ -24,6 +26,8 @@ import lombok.Data;
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@ApiModelProperty(position = 1, required = true, 
+	hidden=true, notes = "Auto generated column")
 	@Column(name="Product_Id")
 	private long productId;
 	@Embedded
