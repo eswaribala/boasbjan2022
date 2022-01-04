@@ -40,7 +40,8 @@ public class CategoryUIController {
 	}
 	
 	@GetMapping("/add")
-	public String addCategory() {
+	public String addCategory(Model model) {
+		model.addAttribute("category", new Category());
 		return "addcategory";
 	}
 	
