@@ -33,4 +33,10 @@ public class CategoryUIController {
 	model.addAttribute("categoryList", categoryList);
 		return "index";
 	}
+	
+	@GetMapping("/add")
+	public String addCategory() {
+		return "addcategory";
+	}
+	
 }
