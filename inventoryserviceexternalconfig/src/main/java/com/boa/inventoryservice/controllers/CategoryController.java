@@ -3,6 +3,8 @@ package com.boa.inventoryservice.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,12 +18,17 @@ import org.springframework.web.bind.annotation.RestController;
 import com.boa.inventoryservice.models.Category;
 import com.boa.inventoryservice.services.CategoryService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping("/categories")
+@RefreshScope
+@Slf4j
 public class CategoryController {
     @Autowired  
 	private CategoryService categoryService;    
-    
+    @Value("${message}")
+    private String message;
     @PostMapping({"/v1.0", "/v1.1"})
     public ResponseEntity<?> addCategory(@RequestBody Category category){
     	Category categoryObj=this.categoryService.addCategory(category);
@@ -34,6 +41,7 @@ public class CategoryController {
     
     @GetMapping({"/v1.0", "/v1.1"})
     public List<Category> getAllCategories(){
+    	log.info("Message From Git"+message);
     	return this.categoryService.fetchAllCategories();
     }
 
