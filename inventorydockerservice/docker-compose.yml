@@ -27,8 +27,7 @@ services:
         max_attempts: 15
         window: 50s
     ports:
-       - 8060-8070:7070
-      
+       - 6060-6070:7070      
       #- 7074:7070
     volumes:
       - /data/compose-app
