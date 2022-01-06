@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.boa.inventoryservice.filters.InventoryFilter;
-
+/*
 @Configuration
 public class FilterConfiguration {
 
@@ -23,3 +23,4 @@ public class FilterConfiguration {
 	}
 
 }
+*/
